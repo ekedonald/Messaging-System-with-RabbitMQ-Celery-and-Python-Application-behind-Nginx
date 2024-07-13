@@ -151,6 +151,14 @@ if __name__ == '__main__':
 
     4. `celery.start()`: Starts the **Celery** worker process.
 
+```sh
+from app import celery, app
+
+if __name__ == '__main__':
+    with app.app_context():
+        celery.start()
+```
+
 - Create the `requirements.txt` file where all the packages and libraries needed for the projects to function.
 
 ```sh
@@ -180,7 +188,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-- Run the commands below to intall the necessary Python packages for the messaging system.
+- Run the commands below to install the necessary Python packages for the messaging system.
 
 ```sh
 pip install flask celery[rabbitmq] python-dotenv gunicorn
