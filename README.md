@@ -201,7 +201,6 @@ source venv/bin/activate
 
 ```sh
 pip install flask celery[rabbitmq] python-dotenv gunicorn
-pip install celery
 ```
 
 ### Step 5: Start the Celery Worker Process and Flask App
@@ -209,25 +208,17 @@ pip install celery
 - Run the following the command to start the Celery Worker Process
 
 ```sh
-celery -A celery_worker.celery worker --loglevel=info
-```
-
-- Open an another terminal, check into the `messaging_system` directory and start the virtual environment.
-
-```sh
-cd messaging_system && source venv/bin/activate
+nohup celery -A celery_worker.celery worker --loglevel=info > /dev/null 2>&1 &
 ```
 
 - Run this command to start the `Gunicorn HTTP Server` to run the Flask Application:
 
 ```sh
-gunicorn -w 4 -b 127.0.0.1:8000 app:app
+nohup gunicorn -w 4 -b 127.0.0.1:8000 app:app > /dev/null 2>&1 &
 ```
 _**Note**: `-w 4` specifies 4 worker processes to handle requests and `-b 127.0.0.1:8000` binds the server to **localhost** on port **8000**._
 
 ### Step 6: Install and Configure Nginx
-
-- Open another terminal since the 
 
 - Run the command shown below to install nginx.
 
@@ -283,8 +274,6 @@ sudo systemctl restart nginx
 
 ### Step 7: Testing & Verification
 
-- Open another terminal.
-
 - Run the following the commands to test the endpoints
 
 ```sh
@@ -294,7 +283,6 @@ curl localhost:80?sendmail=ejekkekekeke
 ```
 
 - Go to the `Celery Window` terminal to view logs, a mail will also be sent the `email-address` you specified.
-
 
 ### Step 8: Ngrok Installation and Setup
 
