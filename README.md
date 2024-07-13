@@ -313,10 +313,10 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 ngrok config add-authtoken <token>
 ```
 
-- Deploy the application app online.
+- Deploy the application app online and select the `Static Domain` option and so the URL does not change.
 
 ```sh
-ngrok http 80
+ngrok http --domain=<generated-url> 80
 ```
 
 - Go to the your browser, paste the link highlighted and click on proceed to site.
