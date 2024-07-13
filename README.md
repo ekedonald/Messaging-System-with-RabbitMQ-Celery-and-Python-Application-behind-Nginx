@@ -239,7 +239,6 @@ sudo apt install nginx -y
 
 
 ```sh
-sudo cat <<EOF | sudo tee /etc/nginx/sites-available/messaging_system
 server {
     listen 80;
     server_name 127.0.0.1 localhost;
@@ -256,8 +255,8 @@ server {
         add_header Content-Type text/plain;
     }
 }
-EOF
 ```
+_/etc/nginx/sites-available/messaging_system_
 
 - Create a soft link to the `/etc/nginx/sites-enabled/` directory.
 
