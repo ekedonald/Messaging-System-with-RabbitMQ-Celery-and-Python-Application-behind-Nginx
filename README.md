@@ -176,7 +176,14 @@ EOF
 
 ```sh
 cat <<EOF | tee .env
-EMAIL_PASS=<gmail_app_password>
+EMAIL_PASSWORD=<gmail_app_password>
+EOF
+```
+
+- Create this file `__init__.py`.
+
+```sh
+touch __init__.py
 ```
 
 ### Step 4: Setup, Activate Python Virtual Environment and Install the Necessary Python Packages for the Messaging System
