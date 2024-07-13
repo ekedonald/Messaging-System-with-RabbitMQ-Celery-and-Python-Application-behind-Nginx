@@ -228,7 +228,6 @@ sudo apt install nginx -y
 
 - Create and configure an nginx configuration file that gives nginx the functionality of a `Reverse Proxy` for the `Gunicorn` server and provides access to the  `/logs` path.
 
-
 ```sh
 server {
     listen 80;
