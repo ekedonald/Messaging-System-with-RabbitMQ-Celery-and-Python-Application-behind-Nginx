@@ -336,6 +336,4 @@ https://<ngrok_url>/?talktome
 https://<ngrok_url>/logs
 ```
 
-![https logs](./images/)
-
 ![https logs](./images/https%20logs.png)
