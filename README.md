@@ -325,7 +325,7 @@ ngrok http --domain=<generated-url> 80
 https://ngrok_url
 ```
 
-- Then append the `?sendmail` and `?talktome` endpoints to test if it works.
+- Then append the `?sendmail` and `?talktome` endpoints to the **ngrok URL** test if it works.
 
 ```sh
 https://<ngrok_url>/?sendmail=<email_address>
