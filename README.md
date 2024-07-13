@@ -313,11 +313,16 @@ ngrok config add-authtoken <token>
 ngrok http --domain=<generated-url> 80
 ```
 
-- Go to the your browser, paste the link highlighted and click on proceed to site.
+![ngrok](./images/ngrok.png)
+
+- Go to the your browser, paste the link highlighted above and click on `Visit site`.
 
 ```sh
 https://ngrok_url
 ```
+
+![visit site](./images/visit%20site.png)
+![http url](./images/http_url.png)
 
 - Then append the `?sendmail` and `?talktome` endpoints to the **ngrok URL** test if it works.
 
