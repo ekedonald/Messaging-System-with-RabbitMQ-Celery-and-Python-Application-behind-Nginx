@@ -140,6 +140,7 @@ def view_logs():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+_app.py_
 
 - The `celery_worker.py` file is used to run **Celery** separately from the main **Flask** application which allows for scalability and resource management. When executed, it processes tasks from the queue defined in the main application. This is a breakdown of its components:
 
@@ -158,6 +159,7 @@ if __name__ == '__main__':
     with app.app_context():
         celery.start()
 ```
+_celery_worker.py_
 
 - Create the `requirements.txt` file where all the packages and libraries needed for the projects to function.
 
@@ -170,7 +172,7 @@ python-dotenv
 EOF
 ```
 
-- Create the `.env` file where sensitive information will be stored.
+- Create a `.env` file where sensitive information will be stored.
 
 ```sh
 cat <<EOF | tee .env
