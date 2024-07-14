@@ -300,7 +300,7 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 	&& sudo apt install ngrok
 ```
 
-- Run the following command to add your authtoken to the default ngrok.yml:
+- Run the following command to add your `authtoken` to the default ngrok.yml:
 
 ```sh
 ngrok config add-authtoken <token>
@@ -313,6 +313,8 @@ ngrok http --domain=<generated-url> 80
 ```
 
 ![ngrok](./images/ngrok.png)
+
+_**Note**: If you want to run ngrok in the background, run this command: `nohup ngrok http --domain=ngrok_domain_url 80 > /dev/null 2>&1 &`_
 
 - Go to the your browser, paste the link highlighted above and click on `Visit site`.
 
